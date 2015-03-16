@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Tenta";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<body data-ng-app="ApplicationModule">
+    <div>
+        <div>
+            <div>
+                <table cellpadding="5" cellspacing="6" width="100%" style="background-color:whitesmoke; border:solid 4px green;">
+                    <tr>
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="showpeople"> Visa alla personer </a></td>
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="addperson"> Skapa ny person </a></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div data-ng-view></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+@*Ladda in alla javascript!!*@
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Module.js")"></script>
+    <script src="~/Scripts/Services.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/ShowPeopleController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/AddPersonController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/EditPersonController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/DeletePersonController.js")"></script>
+}  

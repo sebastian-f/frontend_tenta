@@ -1,0 +1,20 @@
+﻿<table><tr><td height="10px"></td></tr></table>
+<table cellpadding="4" cellspacing="4" width="90%" align="center"
+       style="background-color: skyblue; border:solid 2px red; padding-top:20px;">
+    <thead>
+        <tr style="background-color:#F5F5F5;">
+            <th>Person_key</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="P in People">
+            <td>{{P.person_key}}</td>
+            <td>{{P.email}}</td>
+            <td><a ng-click="editPerson(P.person_key)">Ändra</a></td>
+            <td><a ng-click="deletePerson(P.person_key)">Ta bort</a></td>
+        </tr>
+    </tbody>
+</table>  
